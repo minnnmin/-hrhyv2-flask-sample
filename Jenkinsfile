@@ -4,11 +4,11 @@ node {
      }
      
      stage('Build image') {
-         app = docker.build("685766701737.dkr.ecr.ap-northeast-1.amazonaws.com/test")
+         app = docker.build("812675885124.dkr.ecr.ap-northeast-1.amazonaws.com/test-aws-credentials")
      }
 
      stage('Push image') {
-         docker.withRegistry('https://685766701737.dkr.ecr.ap-northeast-1.amazonaws.com', 'ecr:ap-northeast-1:ecr_credential') {
+         docker.withRegistry('https://812675885124.dkr.ecr.ap-northeast-1.amazonaws.com', 'ecr:ap-northeast-1:ecr_credential') {
              app.push("be_${env.BUILD_NUMBER}")
              app.push("latest")
      }
