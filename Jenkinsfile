@@ -31,7 +31,7 @@ node {
                         git config --global user.email "rhkr_alswjd@naver.com"
                         git config --global user.name "minnmin"
                         git checkout main
-                        git pull origin main
+                        git pull
                         cd overlay/dev && kustomize edit set image 685766701737.dkr.ecr.ap-northeast-1.amazonaws.com/test:be_${env.BUILD_NUMBER}
                         git commit -a -m "updated the image tag be_${env.BUILD_NUMBER}"
                         git push
