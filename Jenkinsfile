@@ -19,7 +19,7 @@ node {
                         branches: [[name: '*/main' ]],
                         extensions: scm.extensions,
                         userRemoteConfigs: [[
-                            url: 'git@github.com:dlgusrb3456/ArgoCD.git',
+                            url: 'git@github.com:minnnmin/hrhyv2-flask-cd.git',
                             credentialsId: 'test-ssh-credentials',
                         ]]
                 ])
