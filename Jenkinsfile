@@ -23,7 +23,7 @@ node {
                             credentialsId: 'jenkins-ssh-credentials',
                         ]]
                 ])
-          sshagent(credentials: ['test-ssh-credentials']){
+          sshagent(credentials: ['jenkins-ssh-credentials']){
                sh("""
                         #!/usr/bin/env bash
                         set +x
